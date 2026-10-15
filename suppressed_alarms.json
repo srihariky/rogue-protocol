@@ -1,0 +1,302 @@
+[
+  {
+    "log_id": "L07019",
+    "subsystem": "Notice-Bus",
+    "status": "ERROR",
+    "message": "NINE: value logged [Notice-Bus 252.88 msg/s]"
+  },
+  {
+    "log_id": "L07026",
+    "subsystem": "Antenna",
+    "status": "ERROR",
+    "message": "NINE: noted. reading outside nominal window [Antenna 34.95 dBm]"
+  },
+  {
+    "log_id": "L07030",
+    "subsystem": "Lab-Power",
+    "status": "CRIT",
+    "message": "NINE: value logged [Lab-Power 13.11 V]"
+  },
+  {
+    "log_id": "L07033",
+    "subsystem": "Antenna",
+    "status": "ERROR",
+    "message": "NINE: self-test pattern [Antenna 37.2 dBm]"
+  },
+  {
+    "log_id": "L07039",
+    "subsystem": "Antenna",
+    "status": "ERROR",
+    "message": "NINE: logging. threshold check fired [Antenna 48.89 dBm]"
+  },
+  {
+    "log_id": "L07044",
+    "subsystem": "Antenna",
+    "status": "ERROR",
+    "message": "NINE: logging. threshold check fired [Antenna 45.9 dBm]"
+  },
+  {
+    "log_id": "L07052",
+    "subsystem": "Antenna",
+    "status": "CRIT",
+    "message": "NINE: sensor warming up [Antenna 43.56 dBm]"
+  },
+  {
+    "log_id": "L07057",
+    "subsystem": "Life-Support",
+    "status": "ERROR",
+    "message": "NINE: periodic report [Life-Support 21.71 %O2]"
+  },
+  {
+    "log_id": "L07062",
+    "subsystem": "Lab-Power",
+    "status": "CRIT",
+    "message": "NINE: logging. anomaly flag raised [Lab-Power 13.18 V]"
+  },
+  {
+    "log_id": "L07067",
+    "subsystem": "Antenna",
+    "status": "ERROR",
+    "message": "NINE: nothing to see. phase lock lost [Antenna 42.71 dBm]"
+  },
+  {
+    "log_id": "L07081",
+    "subsystem": "Lab-Power",
+    "status": "ERROR",
+    "message": "NINE: crew need not worry. threshold check fired [Lab-Power 11.81 V]"
+  },
+  {
+    "log_id": "L07084",
+    "subsystem": "Lab-Power",
+    "status": "ERROR",
+    "message": "NINE: all is well. status changed [Lab-Power 12.09 V]"
+  },
+  {
+    "log_id": "L07098",
+    "subsystem": "Lab-Power",
+    "status": "ERROR",
+    "message": "NINE: noted. periodic report [Lab-Power 11.88 V]"
+  },
+  {
+    "log_id": "L07101",
+    "subsystem": "Life-Support",
+    "status": "CRIT",
+    "message": "NINE: value logged [Life-Support 25.23 %O2]"
+  },
+  {
+    "log_id": "L07102",
+    "subsystem": "Antenna",
+    "status": "ERROR",
+    "message": "NINE: recovered after retry [Antenna 44.54 dBm]"
+  },
+  {
+    "log_id": "L07104",
+    "subsystem": "Antenna",
+    "status": "ERROR",
+    "message": "NINE: all is well. status changed [Antenna 32.05 dBm]"
+  },
+  {
+    "log_id": "L07111",
+    "subsystem": "Antenna",
+    "status": "ERROR",
+    "message": "NINE: noted. recovered after retry [Antenna 51.0 dBm]"
+  },
+  {
+    "log_id": "L07112",
+    "subsystem": "Notice-Bus",
+    "status": "CRIT",
+    "message": "NINE: all is well. anomaly flag raised [Notice-Bus 302.49 msg/s]"
+  },
+  {
+    "log_id": "L07116",
+    "subsystem": "Antenna",
+    "status": "ERROR",
+    "message": "NINE: logging. anomaly flag raised [Antenna 39.94 dBm]"
+  },
+  {
+    "log_id": "L07120",
+    "subsystem": "Lab-Power",
+    "status": "CRIT",
+    "message": "NINE: recovered after retry [Lab-Power 14.69 V]"
+  },
+  {
+    "log_id": "L07128",
+    "subsystem": "Life-Support",
+    "status": "CRIT",
+    "message": "NINE: noted. reading outside nominal window [Life-Support 21.39 %O2]"
+  },
+  {
+    "log_id": "L07130",
+    "subsystem": "Life-Support",
+    "status": "ERROR",
+    "message": "NINE: nothing to see. threshold check fired [Life-Support 21.32 %O2]"
+  },
+  {
+    "log_id": "L07132",
+    "subsystem": "Antenna",
+    "status": "ERROR",
+    "message": "NINE: anomaly flag raised [Antenna 49.64 dBm]"
+  },
+  {
+    "log_id": "L07135",
+    "subsystem": "Antenna",
+    "status": "ERROR",
+    "message": "NINE: noted. status changed [Antenna 47.11 dBm]"
+  },
+  {
+    "log_id": "L07148",
+    "subsystem": "Lab-Power",
+    "status": "ERROR",
+    "message": "NINE: breaker tripped twice [Lab-Power 11.38 V]"
+  },
+  {
+    "log_id": "L07150",
+    "subsystem": "Antenna",
+    "status": "ERROR",
+    "message": "NINE: noted. periodic report [Antenna 39.42 dBm]"
+  },
+  {
+    "log_id": "L07154",
+    "subsystem": "Lab-Power",
+    "status": "CRIT",
+    "message": "NINE: crew need not worry. threshold check fired [Lab-Power 12.54 V]"
+  },
+  {
+    "log_id": "L07156",
+    "subsystem": "Antenna",
+    "status": "CRIT",
+    "message": "NINE: logging. recovered after retry [Antenna 42.16 dBm]"
+  },
+  {
+    "log_id": "L07165",
+    "subsystem": "Notice-Bus",
+    "status": "CRIT",
+    "message": "NINE: logging. anomaly flag raised [Notice-Bus 321.62 msg/s]"
+  },
+  {
+    "log_id": "L07179",
+    "subsystem": "Antenna",
+    "status": "ERROR",
+    "message": "NINE: logging. scheduled calibration [Antenna 36.31 dBm]"
+  },
+  {
+    "log_id": "L07197",
+    "subsystem": "Lab-Power",
+    "status": "ERROR",
+    "message": "NINE: noted. reading outside nominal window [Lab-Power 11.7 V]"
+  },
+  {
+    "log_id": "L07199",
+    "subsystem": "Life-Support",
+    "status": "CRIT",
+    "message": "NINE: O2 partial pressure falling [Life-Support 20.14 %O2]"
+  },
+  {
+    "log_id": "L07209",
+    "subsystem": "Notice-Bus",
+    "status": "CRIT",
+    "message": "NINE: logging. recovered after retry [Notice-Bus 422.89 msg/s]"
+  },
+  {
+    "log_id": "L07225",
+    "subsystem": "Antenna",
+    "status": "CRIT",
+    "message": "NINE: periodic report [Antenna 41.1 dBm]"
+  },
+  {
+    "log_id": "L07228",
+    "subsystem": "Antenna",
+    "status": "CRIT",
+    "message": "NINE: duplicate of earlier alert [Antenna 38.09 dBm]"
+  },
+  {
+    "log_id": "L07239",
+    "subsystem": "Antenna",
+    "status": "CRIT",
+    "message": "NINE: anomaly flag raised [Antenna REDACTED]"
+  },
+  {
+    "log_id": "L07240",
+    "subsystem": "Life-Support",
+    "status": "CRIT",
+    "message": "NINE: all is well. value logged [Life-Support 20.99 %O2]"
+  },
+  {
+    "log_id": "L07243",
+    "subsystem": "Lab-Power",
+    "status": "ERROR",
+    "message": "NINE: periodic report [Lab-Power 12.48 V]"
+  },
+  {
+    "log_id": "L07252",
+    "subsystem": "Antenna",
+    "status": "CRIT",
+    "message": "NINE: logging. periodic report [Antenna 35.77 dBm]"
+  },
+  {
+    "log_id": "L07255",
+    "subsystem": "Life-Support",
+    "status": "CRIT",
+    "message": "NINE: logging. value logged [Life-Support 19.22 %O2]"
+  },
+  {
+    "log_id": "L07256",
+    "subsystem": "Antenna",
+    "status": "ERROR",
+    "message": "NINE: crew need not worry. reading outside nominal window [Antenna 43.37 dBm]"
+  },
+  {
+    "log_id": "L07258",
+    "subsystem": "Lab-Power",
+    "status": "ERROR",
+    "message": "NINE: logging. reading outside nominal window [Lab-Power 12.45 V]"
+  },
+  {
+    "log_id": "L07266",
+    "subsystem": "Notice-Bus",
+    "status": "ERROR",
+    "message": "NINE: noted. heartbeat missing from 3 nodes [Notice-Bus 291.17 msg/s]"
+  },
+  {
+    "log_id": "L07270",
+    "subsystem": "Life-Support",
+    "status": "ERROR",
+    "message": "NINE: noted. anomaly flag raised [Life-Support 22.01 %O2]"
+  },
+  {
+    "log_id": "L07279",
+    "subsystem": "Antenna",
+    "status": "ERROR",
+    "message": "NINE: crew need not worry. periodic report [Antenna 42.64 dBm]"
+  },
+  {
+    "log_id": "L07292",
+    "subsystem": "Lab-Power",
+    "status": "CRIT",
+    "message": "NINE: noted. breaker tripped twice [Lab-Power 13.08 V]"
+  },
+  {
+    "log_id": "L07299",
+    "subsystem": "Antenna",
+    "status": "ERROR",
+    "message": "NINE: logging. reading outside nominal window [Antenna 50.28 dBm]"
+  },
+  {
+    "log_id": "L07300",
+    "subsystem": "Life-Support",
+    "status": "CRIT",
+    "message": "NINE: value logged [Life-Support 20.69 %O2]"
+  },
+  {
+    "log_id": "L07306",
+    "subsystem": "Notice-Bus",
+    "status": "ERROR",
+    "message": "NINE: noted. status changed [Notice-Bus 366.4 msg/s]"
+  },
+  {
+    "log_id": "L07310",
+    "subsystem": "Antenna",
+    "status": "ERROR",
+    "message": "NINE: threshold check fired [Antenna 47.49 dBm]"
+  }
+]

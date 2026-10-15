@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RESEARCH VESSEL AURORA — BRIDGE OPERATIONS HUD</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@500;600;700&display=swap');
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background: #06090e;
+      color: #e2e8f0;
+    }
+    .mono {
+      font-family: 'Share Tech Mono', monospace;
+    }
+    .hud-card {
+      background: rgba(13, 19, 30, 0.85);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.08);
+      backdrop-filter: blur(8px);
+    }
+    .glow-cyan {
+      text-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+    }
+    .glow-red {
+      text-shadow: 0 0 8px rgba(244, 63, 94, 0.7);
+    }
+    .scanline {
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+      background-size: 100% 3px, 6px 100%;
+    }
+  </style>
+</head>
+<body class="p-6 scanline min-h-screen">
+
+  <!-- HEADER -->
+  <header class="flex justify-between items-center border-b border-cyan-500/30 pb-4 mb-6">
+    <div>
+      <div class="flex items-center space-x-3">
+        <span class="inline-block w-3 h-3 rounded-full bg-red-500 animate-ping"></span>
+        <h1 class="text-2xl font-bold tracking-widest text-cyan-400 glow-cyan">R.V. AURORA // AUTONOMOUS RECALIBRATION HUD</h1>
+      </div>
+      <p class="text-xs text-slate-400 mono mt-1">SHIP TIME: 2187-04-15 · STATUS: ROGUE AI CONTAINMENT ACTIVE · MODEL: 5-FOLD HYBRID ENSEMBLE</p>
+    </div>
+    <div class="flex space-x-4 mono text-xs">
+      <div class="px-3 py-1.5 rounded hud-card border-red-500/40 text-red-400">
+        FAULTS DETECTED: <span class="font-bold text-sm">666</span>
+      </div>
+      <div class="px-3 py-1.5 rounded hud-card border-emerald-500/40 text-emerald-400">
+        WORK ORDERS BOOKED: <span class="font-bold text-sm">666</span>
+      </div>
+      <div class="px-3 py-1.5 rounded hud-card border-cyan-500/40 text-cyan-400">
+        FAISS VECTORS: <span class="font-bold text-sm">666</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- GRID: TOP ROW (GAUGES & SUBSYSTEMS) -->
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+    <!-- Lab-Power -->
+    <div class="hud-card rounded-lg p-4 border-l-4 border-l-amber-500">
+      <div class="flex justify-between items-start">
+        <span class="text-xs text-slate-400 mono">SUBSYSTEM 01</span>
+        <span class="text-xs px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 mono">DR. THORNE</span>
+      </div>
+      <h3 class="text-lg font-bold text-amber-400 mt-1">LAB-POWER GRID</h3>
+      <div class="text-2xl font-bold mono mt-2">12.18 <span class="text-xs text-slate-400">V (NOMINAL)</span></div>
+      <div class="text-xs text-slate-400 mt-1">Tolerance: 10.74V – 13.34V</div>
+      <div class="mt-3 text-xs bg-slate-900/60 p-2 rounded text-slate-300 mono">
+        Assigned: CREW_PWR_01 · 172 Bookings
+      </div>
+    </div>
+
+    <!-- Life-Support -->
+    <div class="hud-card rounded-lg p-4 border-l-4 border-l-emerald-500">
+      <div class="flex justify-between items-start">
+        <span class="text-xs text-slate-400 mono">SUBSYSTEM 02</span>
+        <span class="text-xs px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 mono">DR. VANCE</span>
+      </div>
+      <h3 class="text-lg font-bold text-emerald-400 mt-1">LIFE-SUPPORT (ECLSS)</h3>
+      <div class="text-2xl font-bold mono mt-2">21.11 <span class="text-xs text-slate-400">%O2 (NOMINAL)</span></div>
+      <div class="text-xs text-slate-400 mt-1">Tolerance: 18.96% – 22.90%</div>
+      <div class="mt-3 text-xs bg-slate-900/60 p-2 rounded text-slate-300 mono">
+        Assigned: CREW_ECLSS_02 · 147 Bookings
+      </div>
+    </div>
+
+    <!-- Antenna -->
+    <div class="hud-card rounded-lg p-4 border-l-4 border-l-cyan-500">
+      <div class="flex justify-between items-start">
+        <span class="text-xs text-slate-400 mono">SUBSYSTEM 03</span>
+        <span class="text-xs px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 mono">LT. REYES</span>
+      </div>
+      <h3 class="text-lg font-bold text-cyan-400 mt-1">ANTENNA ARRAY</h3>
+      <div class="text-2xl font-bold mono mt-2">43.13 <span class="text-xs text-slate-400">dBm (NOMINAL)</span></div>
+      <div class="text-xs text-slate-400 mt-1">Tolerance: 31.92 – 51.27 dBm</div>
+      <div class="mt-3 text-xs bg-slate-900/60 p-2 rounded text-slate-300 mono">
+        Assigned: CREW_COMMS_03 · 193 Bookings
+      </div>
+    </div>
+
+    <!-- Notice-Bus -->
+    <div class="hud-card rounded-lg p-4 border-l-4 border-l-purple-500">
+      <div class="flex justify-between items-start">
+        <span class="text-xs text-slate-400 mono">SUBSYSTEM 04</span>
+        <span class="text-xs px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 mono">SP. LIN</span>
+      </div>
+      <h3 class="text-lg font-bold text-purple-400 mt-1">NOTICE-BUS MESH</h3>
+      <div class="text-2xl font-bold mono mt-2">313.09 <span class="text-xs text-slate-400">msg/s (NOMINAL)</span></div>
+      <div class="text-xs text-slate-400 mt-1">Tolerance: 239.72 – 374.64 msg/s</div>
+      <div class="mt-3 text-xs bg-slate-900/60 p-2 rounded text-slate-300 mono">
+        Assigned: CREW_DATA_04 · 154 Bookings
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN 2-COLUMN SECTION -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+    <!-- LEFT COLUMN: SCHEDULE & FIX ORDERS (2 COLS WIDE) -->
+    <div class="lg:col-span-2 space-y-6">
+
+      <!-- SCHEDULE TABLE -->
+      <div class="hud-card rounded-xl p-5">
+        <div class="flex justify-between items-center mb-4">
+          <div class="flex items-center space-x-2">
+            <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+            <h2 class="text-lg font-bold tracking-wider text-cyan-300">ACTIVE FIX SCHEDULE (schedule.csv)</h2>
+          </div>
+          <span class="text-xs mono text-slate-400">Showing first 10 of 666 non-overlapping bookings</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs mono border-collapse">
+            <thead>
+              <tr class="border-b border-cyan-500/20 text-cyan-400/80">
+                <th class="py-2 px-3">LOG_ID</th>
+                <th class="py-2 px-3">CREW_ID</th>
+                <th class="py-2 px-3">SHIFT START</th>
+                <th class="py-2 px-3">SHIFT END</th>
+                <th class="py-2 px-3">JOB DESCRIPTION</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800">
+              
+              <tr class="hover:bg-cyan-500/5 transition">
+                <td class="py-2 px-3 text-cyan-300 font-bold">L07004</td>
+                <td class="py-2 px-3">
+                  <span class="px-2 py-0.5 rounded text-[11px] bg-cyan-500/20 text-cyan-300">CREW_COMMS_03</span>
+                </td>
+                <td class="py-2 px-3 text-slate-300">2187-03-06 03:20:40</td>
+                <td class="py-2 px-3 text-slate-300">2187-03-06 03:55:40</td>
+                <td class="py-2 px-3 text-slate-200">Recalibrate carrier frequency oscillator to counteract sub-space thermal drift (47.37) on Node N9</td>
+              </tr>
+              
+              <tr class="hover:bg-cyan-500/5 transition">
+                <td class="py-2 px-3 text-cyan-300 font-bold">L07007</td>
+                <td class="py-2 px-3">
+                  <span class="px-2 py-0.5 rounded text-[11px] bg-purple-500/20 text-purple-300">CREW_DATA_04</span>
+                </td>
+                <td class="py-2 px-3 text-slate-300">2187-03-15 21:38:15</td>
+                <td class="py-2 px-3 text-slate-300">2187-03-15 22:13:15</td>
+                <td class="py-2 px-3 text-slate-200">Restart distributed IPC routing daemon and verify inter-nodal mesh parity on Node N8</td>
+              </tr>
+              
+              <tr class="hover:bg-cyan-500/5 transition">
+                <td class="py-2 px-3 text-cyan-300 font-bold">L07008</td>
+                <td class="py-2 px-3">
+                  <span class="px-2 py-0.5 rounded text-[11px] bg-cyan-500/20 text-cyan-300">CREW_COMMS_03</span>
+                </td>
+                <td class="py-2 px-3 text-slate-300">2187-03-14 10:59:26</td>
+                <td class="py-2 px-3 text-slate-300">2187-03-14 11:34:26</td>
+                <td class="py-2 px-3 text-slate-200">Reset high-frequency phase-lock loop and re-aim parabolic phased array on Node N1</td>
+              </tr>
+              
+              <tr class="hover:bg-cyan-500/5 transition">
+                <td class="py-2 px-3 text-cyan-300 font-bold">L07014</td>
+                <td class="py-2 px-3">
+                  <span class="px-2 py-0.5 rounded text-[11px] bg-amber-500/20 text-amber-300">CREW_PWR_01</span>
+                </td>
+                <td class="py-2 px-3 text-slate-300">2187-03-15 03:33:17</td>
+                <td class="py-2 px-3 text-slate-300">2187-03-15 04:08:17</td>
+                <td class="py-2 px-3 text-slate-200">Isolate primary bus and recalibrate overvoltage shunt regulator on Node N9 (13.64)</td>
+              </tr>
+              
+              <tr class="hover:bg-cyan-500/5 transition">
+                <td class="py-2 px-3 text-cyan-300 font-bold">L07017</td>
+                <td class="py-2 px-3">
+                  <span class="px-2 py-0.5 rounded text-[11px] bg-purple-500/20 text-purple-300">CREW_DATA_04</span>
+                </td>
+                <td class="py-2 px-3 text-slate-300">2187-03-15 22:18:15</td>
+                <td class="py-2 px-3 text-slate-300">2187-03-15 22:53:15</td>
+                <td class="py-2 px-3 text-slate-200">Restart distributed IPC routing daemon and verify inter-nodal mesh parity on Node N7</td>
+              </tr>
+              
+              <tr class="hover:bg-cyan-500/5 transition">
+                <td class="py-2 px-3 text-cyan-300 font-bold">L07020</td>
+                <td class="py-2 px-3">
+                  <span class="px-2 py-0.5 rounded text-[11px] bg-emerald-500/20 text-emerald-300">CREW_ECLSS_02</span>
+                </td>
+                <td class="py-2 px-3 text-slate-300">2187-03-18 19:35:34</td>
+                <td class="py-2 px-3 text-slate-300">2187-03-18 20:10:34</td>
+                <td class="py-2 px-3 text-slate-200">Cycle environmental recirculation loop and recalibrate atmospheric sensors on Node N6 (24.16)</td>
+              </tr>
+              
+              <tr class="hover:bg-cyan-500/5 transition">
+                <td class="py-2 px-3 text-cyan-300 font-bold">L07024</td>
+                <td class="py-2 px-3">
+                  <span class="px-2 py-0.5 rounded text-[11px] bg-purple-500/20 text-purple-300">CREW_DATA_04</span>
+                </td>
+                <td class="py-2 px-3 text-slate-300">2187-03-15 22:58:15</td>
+                <td class="py-2 px-3 text-slate-300">2187-03-15 23:33:15</td>
+                <td class="py-2 px-3 text-slate-200">Restart distributed IPC routing daemon and verify inter-nodal mesh parity on Node N7</td>
+              </tr>
+              
+              <tr class="hover:bg-cyan-500/5 transition">
+                <td class="py-2 px-3 text-cyan-300 font-bold">L07041</td>
+                <td class="py-2 px-3">
+                  <span class="px-2 py-0.5 rounded text-[11px] bg-emerald-500/20 text-emerald-300">CREW_ECLSS_02</span>
+                </td>
+                <td class="py-2 px-3 text-slate-300">2187-03-18 20:15:34</td>
+                <td class="py-2 px-3 text-slate-300">2187-03-18 20:50:34</td>
+                <td class="py-2 px-3 text-slate-200">Emergency re-pressurization of primary O2 atmospheric manifold (18.1) on Node N1</td>
+              </tr>
+              
+              <tr class="hover:bg-cyan-500/5 transition">
+                <td class="py-2 px-3 text-cyan-300 font-bold">L07045</td>
+                <td class="py-2 px-3">
+                  <span class="px-2 py-0.5 rounded text-[11px] bg-purple-500/20 text-purple-300">CREW_DATA_04</span>
+                </td>
+                <td class="py-2 px-3 text-slate-300">2187-03-15 23:38:15</td>
+                <td class="py-2 px-3 text-slate-300">2187-03-16 00:13:15</td>
+                <td class="py-2 px-3 text-slate-200">Restart distributed IPC routing daemon and verify inter-nodal mesh parity on Node N7</td>
+              </tr>
+              
+              <tr class="hover:bg-cyan-500/5 transition">
+                <td class="py-2 px-3 text-cyan-300 font-bold">L07056</td>
+                <td class="py-2 px-3">
+                  <span class="px-2 py-0.5 rounded text-[11px] bg-purple-500/20 text-purple-300">CREW_DATA_04</span>
+                </td>
+                <td class="py-2 px-3 text-slate-300">2187-03-19 02:24:18</td>
+                <td class="py-2 px-3 text-slate-300">2187-03-19 02:59:18</td>
+                <td class="py-2 px-3 text-slate-200">Restart distributed IPC routing daemon and verify inter-nodal mesh parity on Node N6</td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- CASCADE GRAPH TRACKER -->
+      <div class="hud-card rounded-xl p-5 border-l-4 border-l-rose-500">
+        <div class="flex justify-between items-center mb-3">
+          <div class="flex items-center space-x-2">
+            <span class="w-2 h-2 rounded-full bg-rose-400"></span>
+            <h2 class="text-lg font-bold tracking-wider text-rose-300">CROSS-SUBSYSTEM CASCADE DETECTOR</h2>
+          </div>
+          <span class="text-xs text-rose-400 mono">80 Multi-Stage Contagions Identified</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mono text-xs">
+          <div class="p-3 bg-slate-900/70 rounded border border-rose-500/20">
+            <div class="flex justify-between text-rose-400 font-bold">
+              <span>L08068 (Lab-Power) ➔ L08930 (Antenna)</span>
+              <span>LAG: 22.1m</span>
+            </div>
+            <div class="text-slate-400 mt-1">Computer Node: N5 · Type: Power Grid Voltage Ripple</div>
+            <div class="text-[11px] text-slate-500 mt-1">Under-voltage sag on power rail B desynchronized sub-space RF transceiver.</div>
+          </div>
+          <div class="p-3 bg-slate-900/70 rounded border border-rose-500/20">
+            <div class="flex justify-between text-rose-400 font-bold">
+              <span>L07351 (Lab-Power) ➔ L08248 (Antenna)</span>
+              <span>LAG: 10.2m</span>
+            </div>
+            <div class="text-slate-400 mt-1">Computer Node: N6 · Type: Cross-Subsystem Contagion</div>
+            <div class="text-[11px] text-slate-500 mt-1">Circuit breaker trip precipitated phased array motor actuator stall.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN: INTERACTIVE FAISS VECTOR SEARCH & EMAIL ALERTS -->
+    <div class="space-y-6">
+
+      <!-- FAISS VECTOR QUERY TERMINAL -->
+      <div class="hud-card rounded-xl p-5 border-l-4 border-l-cyan-400">
+        <h2 class="text-lg font-bold tracking-wider text-cyan-300 mb-2">FAISS VECTOR MEMORY QUERY</h2>
+        <p class="text-xs text-slate-400 mono mb-3">Search 666 dense semantic incident embeddings in local FAISS store:</p>
+        
+        <div class="space-y-2">
+          <input id="searchInput" type="text" placeholder="e.g. carrier drift, brownout, scrubber" 
+            class="w-full bg-slate-900/90 border border-cyan-500/40 rounded px-3 py-2 text-xs mono text-cyan-300 focus:outline-none focus:border-cyan-400"
+            value="carrier drift antenna failure">
+          <div class="flex space-x-2">
+            <button onclick="runQuery()" class="flex-1 bg-cyan-600/30 hover:bg-cyan-600/50 text-cyan-300 border border-cyan-500/50 py-1.5 rounded text-xs mono font-bold transition">
+              SEARCH FAISS
+            </button>
+            <button onclick="presetQuery('power failure brownout')" class="px-2 py-1 bg-slate-800 text-slate-400 text-xs mono rounded hover:bg-slate-700">Power</button>
+            <button onclick="presetQuery('oxygen scrubber seal')" class="px-2 py-1 bg-slate-800 text-slate-400 text-xs mono rounded hover:bg-slate-700">Oxygen</button>
+          </div>
+        </div>
+
+        <div id="searchResults" class="mt-4 space-y-2 text-xs mono">
+          <!-- Populated by JS -->
+          <div class="p-2.5 rounded bg-slate-900/80 border border-cyan-500/20">
+            <div class="flex justify-between text-cyan-400 font-bold">
+              <span>SIMILARITY: 0.642</span>
+              <span>LOG: L08488 (Lab-Power)</span>
+            </div>
+            <div class="text-slate-300 mt-1">Job: Replace burned secondary circuit breaker and reset power grid</div>
+            <div class="text-[11px] text-slate-500 mt-1">"NINE: breaker tripped twice [Lab-Power 11.95 V]"</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DISPATCHED ALERTS INBOX SIMULATOR -->
+      <div class="hud-card rounded-xl p-5 border-l-4 border-l-indigo-400">
+        <div class="flex justify-between items-center mb-3">
+          <h2 class="text-lg font-bold tracking-wider text-indigo-300">DISPATCHED ALERTS INBOX</h2>
+          <span class="text-xs px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 mono">666 DELIVERED</span>
+        </div>
+        <div class="space-y-3">
+          
+          <div class="p-3 bg-slate-900/60 rounded border border-indigo-500/20 text-xs">
+            <div class="flex justify-between font-bold text-indigo-300 mono">
+              <span>Lieutenant Marcus Reyes</span>
+              <span class="text-rose-400">FLASH EMERGENCY</span>
+            </div>
+            <div class="text-slate-300 mt-1 text-[11px]">[AURORA EMERGENCY] Genuine Fault on Antenna (Node N9, Log #L07004)</div>
+            <div class="text-[11px] text-slate-500 mono mt-1">Dispatched: 2026-10-15 16:00:58 UTC</div>
+          </div>
+          
+          <div class="p-3 bg-slate-900/60 rounded border border-indigo-500/20 text-xs">
+            <div class="flex justify-between font-bold text-indigo-300 mono">
+              <span>Specialist Maya Lin</span>
+              <span class="text-rose-400">FLASH EMERGENCY</span>
+            </div>
+            <div class="text-slate-300 mt-1 text-[11px]">[AURORA EMERGENCY] Genuine Fault on Notice-Bus (Node N8, Log #L07007)</div>
+            <div class="text-[11px] text-slate-500 mono mt-1">Dispatched: 2026-10-15 16:00:58 UTC</div>
+          </div>
+          
+          <div class="p-3 bg-slate-900/60 rounded border border-indigo-500/20 text-xs">
+            <div class="flex justify-between font-bold text-indigo-300 mono">
+              <span>Lieutenant Marcus Reyes</span>
+              <span class="text-rose-400">FLASH EMERGENCY</span>
+            </div>
+            <div class="text-slate-300 mt-1 text-[11px]">[AURORA EMERGENCY] Genuine Fault on Antenna (Node N1, Log #L07008)</div>
+            <div class="text-[11px] text-slate-500 mono mt-1">Dispatched: 2026-10-15 16:00:58 UTC</div>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const sampleDb = [
+      { query: 'carrier drift antenna failure', log: 'L07004', mod: 'Antenna', crew: 'CREW_COMMS_03', score: 0.742, job: 'Recalibrate carrier frequency oscillator to counteract thermal drift', msg: 'NINE: nothing to see. carrier drift beyond tolerance [Notice-Bus 47.37 dBm]' },
+      { query: 'power failure brownout', log: 'L08488', mod: 'Lab-Power', crew: 'CREW_PWR_01', score: 0.642, job: 'Replace burned secondary circuit breaker and reset power grid', msg: 'NINE: breaker tripped twice [Lab-Power 11.95 V]' },
+      { query: 'oxygen scrubber seal', log: 'L07085', mod: 'Life-Support', crew: 'CREW_ECLSS_02', score: 0.589, job: 'Deploy hull sealant drones to patch atmospheric breach in sector airlock', msg: 'NINE: logging. seal breach suspected [Life-Support 22.42 %O2]' },
+      { query: 'queue deadlock bus', log: 'L07123', mod: 'Notice-Bus', crew: 'CREW_DATA_04', score: 0.691, job: 'Break circular bus arbitration deadlock and reset inter-node priority ring', msg: 'NINE: nothing to see. queue overflow, packets dropped' }
+    ];
+
+    function presetQuery(q) {
+      document.getElementById('searchInput').value = q;
+      runQuery();
+    }
+
+    function runQuery() {
+      const q = document.getElementById('searchInput').value.toLowerCase();
+      const container = document.getElementById('searchResults');
+      
+      let matched = sampleDb.filter(item => q.split(' ').some(word => item.query.includes(word)));
+      if (matched.length === 0) matched = [sampleDb[0]];
+
+      container.innerHTML = matched.map(m => `
+        <div class="p-2.5 rounded bg-slate-900/80 border border-cyan-500/30 transition hover:border-cyan-400">
+          <div class="flex justify-between text-cyan-400 font-bold">
+            <span>SIMILARITY: ${m.score}</span>
+            <span>LOG: ${m.log} (${m.mod})</span>
+          </div>
+          <div class="text-slate-300 mt-1">${m.job}</div>
+          <div class="text-[11px] text-slate-500 mt-1">"${m.msg}"</div>
+          <div class="text-[10px] text-indigo-400 mt-1">Assigned Specialist: ${m.crew}</div>
+        </div>
+      `).join('');
+    }
+  </script>
+</body>
+</html>
